@@ -28,9 +28,9 @@ long long countAtMostK( string &s , int k ) {
     return totalCount ;
 }
 
-long long countExactlyK(string &s , int k) {
-    if (k <= 0) return 0 ;
-    if (k > (int)s.length()) return 0 ;
+long long countExactlyK( string &s , int k ) {
+    if( k <= 0 ) return 0 ;
+    if( k > (int)s.length() ) return 0 ;
     return countAtMostK(s , k) - countAtMostK(s , k - 1) ;
 }
 
